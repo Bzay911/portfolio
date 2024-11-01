@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/Bzay911/portfolio/static/js/main.763aed60.js",
-    "index.html": "/Bzay911/portfolio/index.html",
-    "main.763aed60.js.map": "/Bzay911/portfolio/static/js/main.763aed60.js.map"
+    "main.js": "/portfolio/static/js/main.763aed60.js",
+    "index.html": "/portfolio/index.html",
+    "main.763aed60.js.map": "/portfolio/static/js/main.763aed60.js.map"
   },
   "entrypoints": [
     "static/js/main.763aed60.js"
