@@ -1,7 +1,7 @@
 import './App.css';
 import Portfolio from './Portfolio';
 import ProjectDetail from './ProjectDetail';
-import {Route,Routes} from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
