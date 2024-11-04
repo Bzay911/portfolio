@@ -60,7 +60,7 @@ export const projects = [
   id: '0',
   title: 'Chat App',
   description: 'This is a sample project description. It showcases the capabilities of our mobile app development skills. The project aims to solve real-world problems with intuitive design and powerful functionality.',
-  videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+  videoUrl: 'https://www.youtube.com/embed/iHGFtZezuqA?si=x3_IE3NBPeBwJsgM',
   technologies: ['React Native', 'iOS', 'Android', 'Node.js', 'MongoDB'],
   icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
   color: "from-yellow-400 to-orange-500"
