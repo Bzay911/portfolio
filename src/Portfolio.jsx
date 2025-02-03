@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, Twitter, aedin, Mail, ChevronDown, Smartphone, Layers, Send, Code, Zap, Cpu, ArrowRight, DogIcon, Notebook } from 'lucide-react'
+import { Github, Twitter, Mail, ChevronDown, Smartphone, Layers, Send, Code, Zap, Cpu, ArrowRight, DogIcon, Notebook, MessageCircleIcon, BotIcon, NotepadText, Calculator, Newspaper, DollarSign, NewspaperIcon, Linkedin, ArrowDownToLine, Phone, Clock } from 'lucide-react'
 import img from './assets/mydog.png'
 import img1 from './assets/calculator.png'
 import img2 from './assets/todo.png'
+import Resume from './assets/Resume.pdf'
 import { Link } from 'react-router-dom'
 
 const TypeWriter = ({ words }) => {
@@ -57,30 +58,39 @@ const FloatingIcon = ({ icon: Icon, delay }) => {
 
 export const projects = [
 {
-  id: '0',
-  title: 'Chat App',
-  description: 'This is a sample project description. It showcases the capabilities of our mobile app development skills. The project aims to solve real-world problems with intuitive design and powerful functionality.',
-  videoUrl: 'https://www.youtube.com/embed/iHGFtZezuqA?si=x3_IE3NBPeBwJsgM',
-  technologies: ['React Native', 'iOS', 'Android', 'Node.js', 'MongoDB'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  id: '10',
+  title: 'Pomo Timer',
+  description: 'Pomodoro Timer app designed to help users stay focused and boost productivity with customizable features like custom timer, background according to the custom background music, integrated todo with room and saved settings using datastore',
+  videoUrl: 'https://www.youtube.com/embed/JCUmk2c3YIk?si=ySqeDmTx0rQFKSqU',
+  technologies: ['Kotlin', 'Jetpack Compose','Room Database', 'Datastore'],
+  icon: <Clock className="w-8 h-8 text-yellow-400" />,
   color: "from-yellow-400 to-orange-500"
 },
-  { 
-    id: '1',
-    title: "Easy Bot",
-    description: "This is an AI application. An API Integrated application made using kotlin and jetpack compose",
-    icon: <Layers className="w-8 h-8 text-purple-400" />,
-      videoUrl: 'https://www.youtube.com/embed/5ALSMK744MI?si=QsiXSeskNekgamXK',
-  technologies: ['Kotlin', 'Jetpack Compose', 'Gemini API', 'Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
-    color: "from-purple-400 to-blue-500"
-  },
+{
+  id: '0',
+  title: 'Chat App',
+  description: 'This is a real time chat application made using Kotlin as programming language and Jetpack compose for UI. To support the real time chat Firebase realtime database has been used.',
+  videoUrl: 'https://www.youtube.com/embed/iHGFtZezuqA?si=x3_IE3NBPeBwJsgM',
+  technologies: ['Kotlin', 'Jetpack Compose','Firebase', 'Realtime Database'],
+  icon: <MessageCircleIcon className="w-8 h-8 text-yellow-400" />,
+  color: "from-yellow-400 to-orange-500"
+},
+{ 
+  id: '9',
+  title: "zVideoCaller",
+  description: "This is a video caller app made using Zego Cloud Service. For this project Kotlin is used as the programming langugage and Jetpack compose is used for the UI.",
+  icon: <Smartphone className="w-8 h-8 text-green-400" />,
+    videoUrl: 'https://www.youtube.com/embed/Y4bI75vXVBk?si=5QLwkfQoZ-HEld_3',
+technologies: ['Kotlin', 'Jetpack Compose', 'Zego Cloud'],
+icon: <Phone className="w-8 h-8 text-yellow-400" />,
+  color: "from-green-400 to-teal-500"
+},
   { 
     id: '2',
     title: "Local Vibes (IOS)",
-    description: "Local Vibes is a local event finder application made for IOS platform using Swift as the programming language",
+    description: "Local Vibes is a local event finder application made for IOS platform using Swift as the programming language. It is a local event finder app where user can create event, read, update and delete it, add organisers and many more",
     icon: <Smartphone className="w-8 h-8 text-green-400" />,
-      videoUrl: 'https://www.youtube.com/embed/ZMINrbLLX3E?si=0ny8sqbzAbMD_rhV"',
+      videoUrl: 'https://www.youtube.com/embed/ZMINrbLLX3E?si=0ny8sqbzAbMD_rhV',
   technologies: ['Swift', 'Storyboard', 'IOS'],
   icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
     color: "from-green-400 to-teal-500"
@@ -88,61 +98,61 @@ export const projects = [
   { 
     id: '3',
     title: "MyDog",
-    description: "MyDog is an android application made using java and xmls for the UI. Its a petcare application specially focused on dogs....",
+    description: "MyDog is an android application made using Java and Xmls for the UI. Its a petcare application specially focused on dogs....",
     icon: <DogIcon className="w-8 h-8 text-yellow-50" />,
       videoUrl: 'https://www.youtube.com/embed/kUTNGbS-uEo?si=uP1hjT4NKT9VDx7U',
   technologies: ['Java', 'Xmls', 'Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  icon: <DogIcon className="w-8 h-8 text-gray-100" />,
     color: "from-yellow-400 to-orange-500"
   },
   { 
     id: '4',
     title: "To Do App",
-    description: "This is a to do application made with kotlin and jetpack compose. It supports room database and stores data locally...",
+    description: "This is a to do application made with Kotlin and Jetpack compose. It supports room database and stores data locally...",
     icon: <Notebook className="w-8 h-8 text-yellow-400" />,
       videoUrl: 'https://www.youtube.com/embed/rvYSVu4BmiA?si=5ojx3t40fGj1IBOT',
-  technologies: ['Kotlin', 'Jetpack Compose','Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  technologies: ['Kotlin', 'Jetpack Compose','Android', 'Room Database'],
+  icon: <NotepadText className="w-8 h-8 text-yellow-400" />,
     color: "from-yellow-400 to-orange-500"
   },
   { 
     id: '5',
     title: "Calculator application",
-    description: "Calculator application demo. An android app created using kotlin and jetpack compose for UI",
+    description: "Calculator application demo. An android app created using Kotlin and Jetpack compose for UI.",
     icon: <Send className="w-8 h-8 text-yellow-400" />,
       videoUrl: 'https://youtube.com/embed/Bp3Pi_ABhsM?si=EVejNjQWE1xVRLLR',
   technologies: ['Kotlin', 'Jetpack Compose','Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  icon: <Calculator className="w-8 h-8 text-yellow-400" />,
     color: "from-yellow-400 to-orange-500"
   },
   { 
     id: '6',
     title: "News Now",
-    description: "Simple news application that fetches data from NEWS API. Made for android using kotlin and jetpack compose..",
+    description: "Simple news application that fetches data from News API. Made for android using Kotlin and Jetpack compose having search functionality.",
     icon: <Send className="w-8 h-8 text-yellow-400" />,
       videoUrl: 'https://youtube.com/embed/LlnoZLcQyKo',
   technologies: ['Kotlin', 'Jetpack Compose','API','Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  icon: <Newspaper className="w-8 h-8 text-yellow-400" />,
     color: "from-yellow-400 to-orange-500"
   },
   { 
     id: '7',
     title: "Crypto App",
-    description: "This a crypto data displaying app that fetches data from the API and displays it to the user. Simple app created using kotlin and jetpack compose",
+    description: "This a crypto data displaying app that fetches data from the API and displays it to the user. Simple app created using Kotlin and Jetpack compose",
     icon: <Send className="w-8 h-8 text-yellow-400" />,
       videoUrl: 'https://youtube.com/embed/Pivk1VHhAs8',
   technologies: ['Kotlin', 'Jetpack Compose','API','Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
     color: "from-yellow-400 to-orange-500"
   },
   { 
     id: '8',
     title: "News App",
-    description: "https://www.youtube.com/embed/c3NPK7wBpa8?si=QnrnxJUZqgc3NhmQ",
+    description: "This is a demo of news application named Khabar. It simply fetches news from NewsApi and displays it. Has onboarding screens, shimmer effects, search functionality, saves bookmarks and many more.",
     icon: <Send className="w-8 h-8 text-yellow-400" />,
-      videoUrl: 'https://youtu.be/c3NPK7wBpa8',
+      videoUrl: 'https://www.youtube.com/embed/c3NPK7wBpa8?si=J8nJpCINv29JRqYT',
   technologies: ['Kotlin', 'Jetpack Compose','API','Android'],
-  icon: <DogIcon className="w-8 h-8 text-yellow-400" />,
+  icon: <NewspaperIcon className="w-8 h-8 text-yellow-400" />,
     color: "from-yellow-400 to-orange-500"
   },
   
@@ -249,6 +259,11 @@ export default function Portfolio() {
                   {item.name}
                 </button>
               ))}
+              <a href={Resume} download className='bg-white flex items-center gap-2 text-blue-800 rounded-full px-3 py-2 cursor-pointer hover:bg-slate-300'>
+                <span>Download Resume</span>
+                <ArrowDownToLine className="w-5 h-8" />
+              </a>
+              
             </div>
           </motion.div>
         </nav>
@@ -313,7 +328,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-6 rounded-lg shadow-lg text-center backdrop-blur-sm"
                 >
-                  <div className="text-4xl mb-4">{['📱', '🍎', '🤖', '🎨', '🔌', '⚡'][index]}</div>
+                  <div className="text-4xl mb-4">{['📱', '🍎', '🤖', '🎨', '👾', '☕️'][index]}</div>
                   <h3 className="text-xl font-semibold text-white">{skill}</h3>
                 </motion.div>
               ))}
@@ -372,26 +387,17 @@ export default function Portfolio() {
                 </motion.div>
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="https://x.com/Bzay_03" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
+              <a href="https://www.linkedin.com/in/bzay" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Twitter className="w-8 h-8" />
+                  <Linkedin className="w-8 h-8" />
                 </motion.div>
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">LinkedIn</span>
               </a>
+             
               <a href="mailto:12510@ait.nsw.edu.au" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <aedin className="w-8 h-8" />
-                </motion.div>
-                <span className="sr-only">aedIn</span>
-              
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}

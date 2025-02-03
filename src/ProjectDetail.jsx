@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Github, Twitter, aedin, Mail, Code, Smartphone, Layers, Send, Zap, Cpu, DogIcon, Notebook } from 'lucide-react'
+import { ArrowLeft, Github, Twitter, aedin, Mail, Code, Smartphone, Layers, Send, Zap, Cpu, DogIcon, Notebook, Coffee, Linkedin } from 'lucide-react'
 import { useParams, Link } from 'react-router-dom'
 import { projects } from './Portfolio'
 
@@ -16,6 +16,7 @@ const techIcons = {
   'Swift': <Send className="w-6 h-6" />,
   'Kotlin': <Send className="w-6 h-6" />,
   'Flutter': <Send className="w-6 h-6" />,
+  'Java': <Coffee className="w-6 h-6" />
 }
 
 const FloatingIcon = ({ icon: Icon, delay }) => {
@@ -93,7 +94,7 @@ const ProjectDetail = ({ project }) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-          <Link href="/Portfolio">
+          <Link to="/">
         <a className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
           Portfolio
         </a>
@@ -187,7 +188,7 @@ const ProjectDetail = ({ project }) => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-6 rounded-lg shadow-lg text-center backdrop-blur-sm"
                 >
-                  <div className="text-4xl mb-4">{techIcons[tech] || '🔧'}</div>
+                  <div className="text-4xl mb-4">{'🔧'}</div>
                   <h3 className="text-xl font-semibold text-white">{tech}</h3>
                 </motion.div>
               ))}
@@ -210,25 +211,16 @@ const ProjectDetail = ({ project }) => {
                 </motion.div>
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="https://x.com/Bzay_03" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
+              <a href="https://www.linkedin.com/in/bzay" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Twitter className="w-8 h-8" />
+                  <Linkedin className="w-8 h-8" />
                 </motion.div>
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">Linkedin</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <aedin className="w-8 h-8" />
-                </motion.div>
-                <span className="sr-only">aedIn</span>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
+              <a href="mailto:12510@ait.nsw.edu.au" className="text-gray-400 hover:text-blue-400 transition-colors transform hover:scale-110">
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
